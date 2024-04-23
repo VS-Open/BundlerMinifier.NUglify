@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <BuildOutputTargetFolder>tools</BuildOutputTargetFolder>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageId>BundlerMinifier.NUglify</PackageId>
+    <Title>BundlerMinifier.NUglify</Title>
+    <Authors>dtarroz</Authors>
+    <Description>Bundles and minifies CSS, JS and HTML files</Description>
+    <Copyright>Copyright $([System.DateTime]::Now.Year)</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>concat;bundle;minify;minification;css;js;html</PackageTags>
+    <PackageProjectUrl>https://github.com/VS-Open/BundlerMinifier.NUglify</PackageProjectUrl>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Content Include="build\*.targets" PackagePath="build\" />
+    <None Include="..\README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <Target Name="PackTaskDependencies" BeforeTargets="GenerateNuspec">
+    <ItemGroup>
+      <_PackageFiles Include="bin\$(Configuration)\*\Newtonsoft.Json.dll;bin\$(Configuration)\*\NUglify.dll;bin\$(Configuration)\*\dotnet-bundle.dll">
+        <PackagePath>tools\%(RecursiveDir)</PackagePath>
+        <Visible>false</Visible>
+        <BuildAction>Content</BuildAction>
+      </_PackageFiles>
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.9.5" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" PrivateAssets="All" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" PrivateAssets="All" />
+    <PackageReference Include="BundlerMinifier.Core" version="3.2.449" PrivateAssets="All" />
+    <PackageReference Include="NUglify" Version="1.21.4" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

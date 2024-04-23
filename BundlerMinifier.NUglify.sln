@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BundlerMinifier.NUglify", "src\BundlerMinifier.NUglify.csproj", "{139A32CA-1D15-424F-9DEF-310B702F3784}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{139A32CA-1D15-424F-9DEF-310B702F3784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139A32CA-1D15-424F-9DEF-310B702F3784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139A32CA-1D15-424F-9DEF-310B702F3784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139A32CA-1D15-424F-9DEF-310B702F3784}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E9C110-D99A-4C0D-89C2-2DD2A1A9575C}
+	EndGlobalSection
+EndGlobal

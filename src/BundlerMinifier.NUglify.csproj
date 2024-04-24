@@ -15,6 +15,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>concat;bundle;minify;minification;css;js;html</PackageTags>
     <PackageProjectUrl>https://github.com/VS-Open/BundlerMinifier.NUglify</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
   
   <ItemGroup>

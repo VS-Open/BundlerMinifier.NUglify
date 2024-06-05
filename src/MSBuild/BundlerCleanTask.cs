@@ -7,11 +7,6 @@ namespace BundlerMinifier.NUglify
 {
     public class BundlerCleanTask : Task
     {
-        static BundlerCleanTask()
-        {
-            AssemblyResolver.Enable();
-        }
-
         private bool _isSuccessful = true;
 
         public string BundleConfigFolder { get; set; }

@@ -10,11 +10,6 @@ namespace BundlerMinifier.NUglify
     /// </summary>
     public class BundlerBuildTask : Task
     {
-        static BundlerBuildTask()
-        {
-            AssemblyResolver.Enable();
-        }
-
         private bool _isSuccessful = true;
 
         public string BundleConfigFolder { get; set; }

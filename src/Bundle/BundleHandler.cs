@@ -94,6 +94,7 @@ namespace BundlerMinifier
                 if (File.Exists(file))
                 {
                     string content;
+                    string separatorLine = string.Empty;
 
                     if (input.EndsWith(".css", StringComparison.OrdinalIgnoreCase) && AdjustRelativePaths(bundle))
                     {
@@ -102,6 +103,7 @@ namespace BundlerMinifier
                     else
                     {
                         content = FileHelpers.ReadAllText(file);
+                        separatorLine = ";\n";
                     }
                     var lastWriteFile = System.IO.File.GetLastWriteTimeUtc(file);
                     if (mostRecentWrite < lastWriteFile)
@@ -110,7 +112,7 @@ namespace BundlerMinifier
                     // adding new line only if there are more than 1 files
                     // otherwise we are preserving file integrity
                     if (sb.Length > 0)
-                        sb.AppendLine();
+                        sb.AppendLine(separatorLine);
 
                     sb.Append(content);
                 }
